@@ -6,8 +6,6 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const PORT = 5000;
-
 app.get("/", (req, res) => {
   res.send("Netflix Login Backend is running!");
 });
@@ -31,6 +29,14 @@ app.post("/login", (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
-});
+// Run locally
+if (require.main === module) {
+  const PORT = 5000;
+
+  app.listen(PORT, () => {
+    console.log(`Server running on http://localhost:${PORT}`);
+  });
+}
+
+// Export for Vercel
+module.exports = app;
