@@ -55,7 +55,11 @@ function App() {
   return (
     <div className="login-page">
       <div className="login-box">
-        <h1>NETFLIX</h1>
+        <h1> NETFLIX LOGIN</h1>
+
+        <p className="demo-text">
+          Educational project — not affiliated with Netflix.
+        </p>
 
         <h2>Sign In</h2>
 
@@ -91,7 +95,7 @@ function App() {
         </div>
 
         <p className="new-user">
-          New to Netflix? <span>Sign up now.</span>
+         New here? <span>Sign up now.</span>
         </p>
       </div>
     </div>

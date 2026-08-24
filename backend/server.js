@@ -10,7 +10,7 @@ app.get("/", (req, res) => {
   res.send("Netflix Login Backend is running!");
 });
 
-app.post("/login", (req, res) => {
+app.post("/api/login", (req, res) => {
   const { email, password } = req.body;
 
   const validEmail = "test@gmail.com";
@@ -29,7 +29,6 @@ app.post("/login", (req, res) => {
   }
 });
 
-// Run locally
 if (require.main === module) {
   const PORT = 5000;
 
@@ -38,5 +37,4 @@ if (require.main === module) {
   });
 }
 
-// Export for Vercel
 module.exports = app;
